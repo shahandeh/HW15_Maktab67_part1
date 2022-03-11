@@ -40,9 +40,9 @@ class AppViewModel : ViewModel() {
 
     val listOfCityLiveData = MutableLiveData(list)
 
-    fun select(position : Int, isSelected: Boolean){
+    fun select(position: Int, isSelected: Boolean) {
 
-        if (isSelected){
+        if (isSelected) {
             listOfFavorite.remove(list[position])
             listOfFavoriteLiveData.value = listOfFavorite
         } else {
@@ -54,7 +54,7 @@ class AppViewModel : ViewModel() {
         listOfCityLiveData.value?.get(position)?.isSelected = list[position].isSelected
     }
 
-    fun removeItem(position : Int){
+    fun removeItem(position: Int) {
         listOfFavorite.removeAt(position)
         listOfFavoriteLiveData.value = listOfFavorite
 

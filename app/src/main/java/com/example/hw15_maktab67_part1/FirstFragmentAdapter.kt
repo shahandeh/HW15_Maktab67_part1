@@ -30,7 +30,10 @@ class FirstFragmentAdapter(
         }
 
         override fun onClick(p0: View?) {
-            adapterClickListener.click(bindingAdapterPosition, listOfCity[bindingAdapterPosition].isSelected)
+            adapterClickListener.click(
+                bindingAdapterPosition,
+                listOfCity[bindingAdapterPosition].isSelected
+            )
         }
     }
 
